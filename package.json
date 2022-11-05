@@ -1,0 +1,30 @@
+{
+  "name": "advent-of-code-js-user",
+  "version": "1.0.0",
+  "description": "Tests of advent of code javascript",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fornwall/advent-of-code-js-user.git"
+  },
+  "keywords": [
+    "javascript",
+    "advent-of-code"
+  ],
+  "author": "Fredrik Fornwall <fredrik@fornwall.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fornwall/advent-of-code-js-user/issues"
+  },
+  "homepage": "https://github.com/fornwall/advent-of-code-js-user#readme",
+  "devDependencies": {
+    "jest": "^29.2.2"
+  },
+  "dependencies": {
+    "advent-of-code-wasm": "^2019.12.462"
+  }
+}
