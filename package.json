@@ -22,9 +22,9 @@
   },
   "homepage": "https://github.com/fornwall/advent-of-code-js-user#readme",
   "devDependencies": {
-    "jest": "^29.2.2"
+    "jest": "*"
   },
   "dependencies": {
-    "advent-of-code-wasm": "^2019.12.462"
+    "advent-of-code-wasm": "*"
   }
 }
