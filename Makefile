@@ -1,5 +1,8 @@
 generate:
 	./generate-tests-from-aoc.py > src/generated.test.js
 
-.PHONY: generate
+test:
+	npm test
+
+.PHONY: generate test
 
