@@ -17,3 +17,9 @@ jobs:
         registry-url: 'https://registry.npmjs.org'
     - run: npm install
     - run: npm test
+
+  test-docker:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: ./run-docker-test.sh
