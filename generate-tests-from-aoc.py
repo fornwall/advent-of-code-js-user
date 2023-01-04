@@ -11,6 +11,8 @@ from pathlib import Path
 from aocd.exceptions import PuzzleUnsolvedError
 from aocd.models import Puzzle, User
 
+generated_file = open("src/generated.test.js", "w")
+
 sessions_file = f"{Path.home()}/.advent-of-code.json"
 with open(sessions_file) as f:
     SESSIONS = json.load(f)
@@ -26,7 +28,7 @@ if "AOC_YEAR" in os.environ:
     else:
         years = [int(years_string)]
 else:
-    years = [2015, 2016, 2017, 2018, 2019, 2020, 2021]
+    years = range(2015, 2023)
 
 if "AOC_DAY" in os.environ:
     days_string = os.environ["AOC_DAY"]
@@ -51,7 +53,7 @@ else:
 print("""const solve = require("advent-of-code-wasm").solve;
 
 test('Advent of Code solutions are solved correctly', () => {
-""")
+""", file=generated_file)
 
 def escape_string(s):
     return s.replace('\\', '\\\\').replace("\n", "\\n").replace("'", "\\'")
@@ -84,6 +86,6 @@ for year in years:
                 answer = puzzle.answer_a if part == 1 else puzzle.answer_b
                 escaped_answer = escape_string(answer)
                 escaped_input = escape_string(input_data)
-                print(f"    expect(solve({year}, {day}, {part}, '{escaped_input}')).toBe('{escaped_answer}');")
+                print(f"    expect(solve({year}, {day}, {part}, '{escaped_input}')).toBe('{escaped_answer}');", file=generated_file)
 
-print("});")
+print("});", file=generated_file)
