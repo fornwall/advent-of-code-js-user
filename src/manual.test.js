@@ -1,4 +1,5 @@
-const solve = require("advent-of-code-wasm").solve;
+import { solve } from "advent-of-code-wasm";
+
 test('Basic functionality works', () => {
   expect(solve(2019, 1, 1, "14")).toBe("2");
 });

@@ -50,7 +50,7 @@ if "AOC_ACCOUNT" in os.environ:
 else:
     account = "*"
 
-print("""const solve = require("advent-of-code-wasm").solve;
+print("""import { solve } from "advent-of-code-wasm";
 
 test('Advent of Code solutions are solved correctly', () => {
 """, file=generated_file)

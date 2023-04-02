@@ -21,6 +21,8 @@ jobs:
     - run: npm install
     - run: npm list
     - run: npm test
+      env:
+        NODE_OPTIONS: "--experimental-vm-modules"
 
   test-docker:
     runs-on: ubuntu-latest
