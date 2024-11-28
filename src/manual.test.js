@@ -6,7 +6,7 @@ test('Basic functionality works', () => {
 
 test('Exception is thrown on bad input', () => {
   const s = () => { solve(2019, 1, 1, "bad_input"); };
-  expect(s).toThrow("Line 1: Invalid digit found in string");
+  expect(s).toThrow("Line 1: invalid digit found in string");
 });
 
 test('Exception is thrown on invalid year', () => {
